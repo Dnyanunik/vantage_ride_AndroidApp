@@ -93,7 +93,7 @@ The application supports multiple user roles with dedicated interfaces:
 
 ## Screenshots
 
-> Images from `drawable/` folder
+
 
 <table>
 <tr>
@@ -153,6 +153,41 @@ This project demonstrates:
 * Scalable architecture
 * Multi-role system handling (RBAC)
 * Cross-platform data consistency
+
+---
+
+## Installation
+
+Clone the repository
+git clone https://github.com/Dnyanunik/vantage_ride_AndroidApp.git
+
+Go to project folder
+cd project-folder
+
+Open the project in Android Studio
+
+---
+
+## Database Configuration
+
+Create a file: SupabaseConfig.java
+
+Add your credentials:
+
+public class SupabaseConfig {
+public static final String URL = "[https://your-project-id.supabase.co](https://your-project-id.supabase.co)";
+
+public static final String ANON_KEY = "your-anon-key";
+}
+
+Replace with your actual Supabase URL and API key
+
+---
+
+## Run Application
+
+Sync Gradle
+Run the app on emulator or device
 
 ---
 
