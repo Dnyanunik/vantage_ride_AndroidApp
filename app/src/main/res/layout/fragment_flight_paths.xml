@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context=".FlightPathsFragment">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:text="FLIGHT PATHS"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="100dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="?attr/colorPrimaryVariant"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INITIALIZE NEW DISPATCH"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="16dp"/>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_input_dark"
+                        android:hint="SELECT SOURCE"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textColorHint="?android:attr/textColorHint"
+                        android:paddingHorizontal="16dp"
+                        android:textSize="14sp"
+                        android:drawableStart="@android:drawable/ic_menu_mylocation"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="?attr/colorPrimary"
+                        android:inputType="none"
+                        android:focusable="false"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/et_destination"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="2"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/bg_input_dark"
+                            android:hint="DESTINATION"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:paddingHorizontal="16dp"
+                            android:textSize="14sp"
+                            android:drawableStart="@android:drawable/ic_menu_directions"
+                            android:drawablePadding="12dp"
+                            android:drawableTint="?attr/colorPrimary"
+                            android:inputType="none"
+                            android:focusable="false"/>
+
+                        <EditText
+                            android:id="@+id/et_distance_km"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_input_dark"
+                            android:hint="KM"
+                            android:gravity="center"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:paddingHorizontal="12dp"
+                            android:textSize="14sp"
+                            android:inputType="number" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_price_4s"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/bg_input_dark"
+                            android:hint="₹ SWIFT"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="16dp"
+                            android:textSize="14sp"
+                            android:inputType="numberDecimal" />
+
+                        <EditText
+                            android:id="@+id/et_price_6s"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_input_dark"
+                            android:hint="₹ ERTIGA"
+                            android:textColor="#FFD700"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="16dp"
+                            android:textSize="14sp"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_add_route"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="24dp"
+                        app:cornerRadius="12dp"
+                        android:backgroundTint="?attr/colorPrimary"
+                        android:text="PUBLISH ROUTE"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="ACTIVE TRANSMISSIONS"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.2"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_routes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_route_card" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

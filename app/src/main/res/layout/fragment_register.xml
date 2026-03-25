@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/registerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        app:cardBackgroundColor="#E6121629"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:strokeColor="#33FFFFFF"
+        app:strokeWidth="1dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="ENLIST IN FLEET"
+                    android:textColor="#d4af37"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="FLEET_REG_v2.2"
+                    android:textColor="#8892A3"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:fontFamily="monospace"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:background="#1A1F36"
+                        android:hint="FULL NAME"
+                        android:textColorHint="#A0A0A0"
+                        android:textColor="#FFFFFF"
+                        android:paddingHorizontal="16dp"
+                        android:textSize="14sp"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/et_username"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:background="#1A1F36"
+                        android:hint="CALLSIGN"
+                        android:textColorHint="#A0A0A0"
+                        android:textColor="#FFFFFF"
+                        android:paddingHorizontal="16dp"
+                        android:textSize="14sp"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#1A1F36"
+                    android:hint="COMM_LINK (EMAIL)"
+                    android:textColorHint="#A0A0A0"
+                    android:textColor="#FFFFFF"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="14sp"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#1A1F36"
+                    android:hint="PHONE NUMBER"
+                    android:textColorHint="#A0A0A0"
+                    android:textColor="#FFFFFF"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="14sp"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#1A1F36"
+                    android:hint="SECURE KEY"
+                    android:textColorHint="#A0A0A0"
+                    android:textColor="#FFFFFF"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="14sp"
+                    android:inputType="textPassword" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_role_customer"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:text="CUSTOMER"
+                        android:textSize="12sp"
+                        android:textColor="#d4af37"
+                        app:strokeColor="#d4af37"
+                        app:backgroundTint="#1Ad4af37" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_role_driver"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:text="PILOT"
+                        android:textSize="12sp"
+                        android:textColor="#8892A3"
+                        app:strokeColor="#33FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_driver_fields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_license_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#1A1F36"
+                        android:hint="PILOT LICENSE ID"
+                        android:textColorHint="#A0A0A0"
+                        android:textColor="#FFFFFF"
+                        android:paddingHorizontal="16dp"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/et_vehicle_model"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="4dp"
+                            android:background="#1A1F36"
+                            android:hint="UNIT MODEL"
+                            android:textColorHint="#A0A0A0"
+                            android:textColor="#FFFFFF"
+                            android:paddingHorizontal="16dp"
+                            android:textSize="14sp" />
+                        <EditText
+                            android:id="@+id/et_plate_number"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="4dp"
+                            android:background="#1A1F36"
+                            android:hint="PLATE_ID"
+                            android:textColorHint="#A0A0A0"
+                            android:textColor="#FFFFFF"
+                            android:paddingHorizontal="16dp"
+                            android:textSize="14sp"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="32dp"
+                    android:backgroundTint="#d4af37"
+                    android:text="INITIALIZE REGISTRATION"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_go_to_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:padding="8dp"
+                    android:text="Already verified? Login"
+                    android:textColor="#8892A3"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

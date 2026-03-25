@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_main">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_ride_history"
+            android:icon="@drawable/ic_history"
+            android:title="Ride History" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+    </group>
+
+    <group android:id="@+id/group_driver" android:visible="false">
+        <item
+            android:id="@+id/nav_manage_fleet"
+            android:icon="@drawable/ic_directions_car"
+            android:title="Manage Fleet" />
+        <item
+            android:id="@+id/nav_create_package"
+            android:icon="@drawable/ic_inventory"
+            android:title="Create Packages" />
+    </group>
+
+    <group android:id="@+id/group_general">
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_info"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Sign Out" />
+
+    </group>
+</menu>

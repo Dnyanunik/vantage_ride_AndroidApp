@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@drawable/header_gradient"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <FrameLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="3dp"
+        android:elevation="8dp"
+        android:background="@drawable/avatar_border">
+
+        <ImageView
+            android:id="@+id/img_header_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            android:src="@android:drawable/ic_menu_myplaces" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_header_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Guest User"
+        android:textColor="@color/header_text_main"
+        android:textSize="22sp"
+        android:letterSpacing="0.02"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tv_header_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="center_horizontal"
+        android:text="PLEASE LOGIN"
+        android:textColor="@color/header_text_secondary"
+        android:textSize="13sp"
+        android:letterSpacing="0.15"
+        android:textAllCaps="true"
+        android:fontFamily="sans-serif-light"
+        android:textAlignment="center" />
+
+</LinearLayout>

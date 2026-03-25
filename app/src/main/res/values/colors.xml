@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="toolbar_color">#6750A4</color>
+
+    <color name="vintage_dark_bg">#0A0A0A</color>
+    <color name="vintage_surface">#1A1A1A</color>
+    <color name="vintage_surface_light">#2A2A2A</color>
+    <color name="vintage_gold">#d4af37</color>
+    <color name="vintage_gold_muted">#AA8C2C</color>
+    <color name="vintage_maroon">#5e1914</color>
+    <color name="vintage_maroon_dark">#3A0F0C</color>
+    <color name="vintage_cream">#f8f1e5</color>
+    <color name="vintage_text_secondary">#A0A0A0</color>
+    <color name="vintage_text_hint">#555555</color>
+    <color name="vintage_divider">#333333</color>
+    <color name="vintage_overlay">#80000000</color>
+
+    <color name="vantage_neon_purple">#8A2BE2</color>
+    <color name="vantage_neon_teal">#00E5FF</color>
+
+    <color name="rainbow_red">#FF0000</color>
+    <color name="rainbow_orange">#FF7F00</color>
+    <color name="rainbow_yellow">#FFFF00</color>
+    <color name="rainbow_green">#00FF00</color>
+    <color name="rainbow_blue">#0000FF</color>
+    <color name="rainbow_indigo">#4B0082</color>
+    <color name="rainbow_violet">#9400D3</color>
+    <color name="navbar_background">@color/white</color>
+    <color name="navbar_content">@color/black</color>
+    <color name="vantage_background">#0D0D0D</color> <color name="vantage_surface">#1A1A1A</color> <color name="vantage_surface_light">#242424</color> <color name="vantage_border">#333333</color> <color name="vantage_neon_green">#00FFA3</color> <color name="vantage_red">#FF4D4D</color> <color name="vantage_gold">#FFD700</color> <color name="vantage_blue">#2979FF</color> <color name="vantage_text_primary">#FFFFFF</color>
+    <color name="vantage_text_secondary">#A0A0A0</color>
+    <color name="header_gradient_start">#2C3E50</color>
+    <color name="header_gradient_end">#000000</color>
+    <color name="header_text_main">#FFFFFF</color>
+    <color name="header_text_secondary">#B3FFFFFF</color>
+
+</resources>

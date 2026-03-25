@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeColor="#1A888888"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <View
+            android:id="@+id/dot_departure"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/circle_gold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line_connecting"
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:background="?android:attr/textColorSecondary"
+            android:alpha="0.5"
+            app:layout_constraintBottom_toTopOf="@id/dot_destination"
+            app:layout_constraintEnd_toEndOf="@id/dot_departure"
+            app:layout_constraintStart_toStartOf="@id/dot_departure"
+            app:layout_constraintTop_toBottomOf="@id/dot_departure" />
+
+        <View
+            android:id="@+id/dot_destination"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ring_grey"
+            app:layout_constraintBottom_toTopOf="@+id/btn_reject"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_departure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Beed, Beed"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/dot_departure"
+            app:layout_constraintEnd_toStartOf="@+id/layout_customer_info"
+            app:layout_constraintStart_toEndOf="@id/dot_departure"
+            app:layout_constraintTop_toTopOf="@id/dot_departure" />
+
+        <TextView
+            android:id="@+id/tv_destination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Lakhani, Bhandara"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/dot_destination"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dot_destination"
+            app:layout_constraintTop_toTopOf="@id/dot_destination" />
+
+        <LinearLayout
+            android:id="@+id/layout_customer_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#1A888888"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dnyaneshwar Nikam"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_person_small"
+                android:drawablePadding="6dp" />
+
+            <TextView
+                android:id="@+id/tv_contact_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="2dp"
+                android:text="8669113136"
+                android:textColor="@color/vantage_gold"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_phone_small"
+                android:drawablePadding="4dp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reject"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="REJECT"
+            android:textColor="@color/vantage_red"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_accept"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dot_destination"
+            app:strokeColor="@color/vantage_red" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_accept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="ACCEPT"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="@color/vantage_neon_green"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_reject"
+            app:layout_constraintTop_toBottomOf="@id/dot_destination" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
